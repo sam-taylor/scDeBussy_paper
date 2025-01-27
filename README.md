@@ -23,12 +23,13 @@ cd Nadeu2022_scRNAseq
 
 The scripts that are used to extract and preprocess data are located in folder `richter_transformation`, as described in the following table. 
 
-| Script | Description |
-|--------|-------------|
-|        |             |
-|        |             |
-|        |             |
+| Script           | Description                                               |
+|------------------|-----------------------------------------------------------|
+| 1_extract_data.R | Extract count matrix and annotations from the source data |
+|                  |                                                           |
+|                  |                                                           |
 
 
 ## Downstream analysis
+
 
