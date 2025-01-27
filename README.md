@@ -26,7 +26,7 @@ The scripts that are used to extract and preprocess data are located in folder `
 | Script           | Description                                               |
 |------------------|-----------------------------------------------------------|
 | 1_extract_data.R | Extract count matrix and annotations from the source data |
-|                  |                                                           |
+| 2_preprocess.py  | Preprocess the expression matrix into h5ad file           |
 |                  |                                                           |
 
 
