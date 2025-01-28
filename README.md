@@ -28,6 +28,7 @@ The scripts that are used to extract and preprocess data are located in folder `
 | 1_extract_data.R | Extract count matrix and annotations from the source data |
 | 2_preprocess.py  | Preprocess the expression matrix into h5ad file           |
 | 3_palantir.py    | Run palantir pseudotime on h5ad files                     |
+| 4_align.py       | Align pseudotime across samples                           |
 
 
 ## Downstream analysis
