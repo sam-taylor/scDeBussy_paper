@@ -22,8 +22,11 @@ print("Computing neighbors...")
 sc.pp.neighbors(b_adata)
 print("Running UMAP...")
 sc.tl.umap(b_adata)
+print("Running PAGA...")
+sc.tl.paga(b_adata, groups='anno')
+sc.pl.paga(b_adata, plot=True)
 print("Drawing graph...")
-sc.tl.draw_graph(b_adata)
+sc.tl.draw_graph(b_adata, init_pos='paga')
 
 print("Saving the data")
 outpath = "../data/HCA-BM/results/"
