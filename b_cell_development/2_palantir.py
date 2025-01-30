@@ -44,9 +44,9 @@ def run_cell_aligndtw(path, batch_key, start_cell_type, end_cell_type, cell_type
     adata = sc.read_h5ad(path)
     adata.X = adata.raw.X.copy()
     patients = adata.obs.loc[:,batch_key].unique()
-    n_component = 15
+    n_components = [10, 10, 10, 4, 10, 5, 5, 10]
     n_top_genes = 2000
-    n_neighbors = 100
+    n_neighbors = 30
 
     for i, patient in enumerate(patients):
         logging.info(f'Processing sample {patient}')
@@ -67,9 +67,9 @@ def run_cell_aligndtw(path, batch_key, start_cell_type, end_cell_type, cell_type
         logging.info("Drawing graph...")
         sc.tl.draw_graph(adata_patient, init_pos='paga')
         logging.info("Running Magic Imputation...")
-        dm_res = palantir.utils.run_diffusion_maps(adata_patient, n_components=n_component)
+        dm_res = palantir.utils.run_diffusion_maps(adata_patient, n_components=n_components[i])
         imputed_X = palantir.utils.run_magic_imputation(adata_patient)
-        logging.info(f"Saving tumor cells adata for {patient}")
+        logging.info(f"Saving adata for {patient}")
         adata_patient.write_h5ad(os.path.join(os.path.dirname(path), f'{patient}.h5ad'))
         outpath = os.path.join(os.path.dirname(path), f'{patient}_palantir.h5ad')
         adata_patient = run_palantir_analysis(adata_patient, start_cell_type, end_cell_type, cell_type_col, outpath)
