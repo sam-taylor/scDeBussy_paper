@@ -14,6 +14,12 @@ The scripts that are used to extract and preprocess data are located in folder `
 | 3_align.py        | Align pseudotime across samples                           |
 
 
+## Young/aged hematopoiesis from normal and MDS individuals
+The source data came from [Ainciburu et al 2023](https://elifesciences.org/articles/79363). We downloaded the data in h5 format as well as the metadata from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE180298). 
+
+The scripts that are used to extract and preprocess data are located in folder `MDS`, as described in the following table. 
+
+
 ## Richter transformation
 
 The source data of CLL to Richter transformation came from [Nadeu et al 2022 Nat Med](https://www.nature.com/articles/s41591-022-01927-8) and the seurat objects were downloaded from [Zenodo](https://zenodo.org/records/6631966) into the `data/` folder.
