@@ -175,3 +175,8 @@ data/
 *.out
 *.sh
 *.png
+MDS/sc_align/scripts/R/lamian_files/figure-latex/fig_plotClusterMeanAndDiff-1.pdf
+MDS/sc_align/scripts/R/lamian_files/figure-latex/fig_plotmclust-1.pdf
+MDS/sc_align/scripts/R/lamian_files/figure-latex/fig_sct_plotclustermean-1.pdf
+MDS/sc_align/scripts/R/lamian_files/figure-latex/fig_sct_plotDiffFitHm3-1.pdf
+MDS/sc_align/scripts/R/lamian_files/figure-latex/fig_sct_plotTDEHm-1.pdf
